@@ -1,0 +1,38 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <!-- 1. display-name (tùy chọn nhưng phải nằm trước servlet) -->
+
+  <display-name>VehicleRegistrationMVC</display-name>
+
+  <!-- 2. servlet definitions -->
+
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>VehicleController</servlet-name>
+    <servlet-class>controller.VehicleController</servlet-class>
+  </servlet>
+
+  <!-- 3. servlet mappings -->
+
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>VehicleController</servlet-name>
+    <url-pattern>/VehicleController</url-pattern>
+  </servlet-mapping>
+
+  <!-- 4. bạn có thể thêm taglib, context-param, v.v. ở đây nếu cần -->
+
+  <welcome-file-list>
+    <welcome-file>jsp/DangnhapFRM.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
